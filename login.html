@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body>
+    <div class="  w-screen h-screen flex items-center justify-center text-yellow-500 bg-[#F6E8EA]">
+        <div class=" shadow-lg rounded-lg h-1/2 w-[500px] flex justify-center items-center relative bg-[#0B132B]" id="p">
+            <h1 class=" absolute top-8 left-[150px] font-bold text-4xl">Sign Up</h1>
+            <form action="">
+             <div class=" flex flex-col gap-4 mt-10 ">
+            <label for="" class=" font-bold text-xl">Email</label> 
+            <input type="email" class=" outline-none border-2 border-b-black h-[30px] w-[200px] text-black">
+            <label for=""  class=" font-bold  text-xl ">Password</label>
+            <input type="password" class=" outline-none border-2 border-b-black text-black" id="pass">
+            <button class=" border-2 text-black bg-orange-400 rounded-lg w-[100px] p-2 mt-2 hover:bg-black hover:text-white transition-all delay-75 ease-in">Signup</button>
+        </div>
+        </form>
+        
+    </div>
+    <script>
+        const pass=document.getElementById("pass");
+        pass.addEventListener("change",checkpass)
+        function checkpass()
+        {
+            let val=pass.value;
+            let regex=/.*[A-Z]+[0-9]+\W{1}/
+            if(regex.test(val))
+            {
+                console.log("Success");
+            }
+            else
+            alert("alert");
+        }
+    </script>
+</body>
+</html>
